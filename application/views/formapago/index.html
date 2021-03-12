@@ -1,0 +1,21 @@
+$def with(formapago)
+<h3>
+    <a href="/formapago">formapago</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>formapago</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in formapago:
+        <tr>
+            <td><a href='/formapago/view/$item.idformapago'>$item.idformapago</a></td>
+            <td><a href='/formapago/edit/$item.idformapago'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/formapago/delete/$item.idformapago'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

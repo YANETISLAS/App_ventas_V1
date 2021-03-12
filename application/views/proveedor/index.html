@@ -1,0 +1,21 @@
+$def with(proveedor)
+<h3>
+    <a href="/proveedor">proveedor</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>proveedor</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in proveedor:
+        <tr>
+            <td><a href='/proveedor/view/$item.idproveedor'>$item.idproveedor</a></td>
+            <td><a href='/proveedor/edit/$item.idproveedor'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/proveedor/delete/$item.idproveedor'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

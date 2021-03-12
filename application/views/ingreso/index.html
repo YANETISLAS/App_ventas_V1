@@ -1,0 +1,21 @@
+$def with(ingreso)
+<h3>
+    <a href="/ingreso">ingreso</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>ingreso</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in ingreso:
+        <tr>
+            <td><a href='/ingreso/view/$item.idingreso'>$item.idingreso</a></td>
+            <td><a href='/ingreso/edit/$item.idingreso'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/ingreso/delete/$item.idingreso'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
